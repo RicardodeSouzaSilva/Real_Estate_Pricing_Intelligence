@@ -55,79 +55,72 @@ O dataset contém informações de vendas de imóveis em King County, incluindo:
 
 ### 🔴 1. Valuation inconsistente
 
-**Desafio:**
-Imóveis semelhantes apresentam preços divergentes, especialmente em regiões próximas.
+Situação
+
+**Clientes reclamam que:**
+
+- Imóveis semelhantes recebem preços muito diferentes
+- Avaliações não refletem localização corretamente
+- Erros altos em imóveis premium
 
 **Impacto:**
 
-* Perda de confiança dos clientes
-* Aumento do churn
-* Decisões de investimento imprecisas
+- Perda de confiança
+- Churn de clientes institucionais
+- Decisões ruins de investimento
 
-**Solução proposta:**
+**Pergunta de negócio**
 
-* Modelos de regressão avançados
-* Feature engineering (idade, renovação, área útil)
-* Uso intensivo de variáveis geoespaciais
+“Como podemos prever o preço de um imóvel com alta precisão considerando localização, características e qualidade?”
 
 ---
 
 ### 🔵 2. Identificação de oportunidades de investimento
 
-**Desafio:**
-A empresa não consegue identificar imóveis subvalorizados de forma quantitativa.
+**Situação**
 
-**Abordagem:**
+Fundos parceiros querem saber:
 
-* Comparação entre preço real e preço predito
+- Onde comprar imóveis subvalorizados    
+- Quais regiões têm maior potencial de valorização
+    
 
-**Métrica-chave:**
+Hoje a empresa não consegue responder isso de forma quantitativa.
 
-```
-desvio = preço_real - preço_predito
-```
+**Impacto**
 
-**Insight:**
+- Perda de contratos com fundos imobiliários    
+- Decisões baseadas em intuição (alto risco)
+    
 
-* Desvio negativo relevante → potencial oportunidade de compra
+**Pergunta de negócio**
+
+“Quais imóveis estão sendo vendidos abaixo do valor esperado?”
 
 ---
 
 ### 🟢 3. Drivers de preço
 
-**Desafio:**
-Falta de clareza sobre o que realmente impacta o valor dos imóveis.
+**Situação**
 
-**Abordagem:**
+**Executivos e clientes perguntam:**
 
-* Feature importance
-* SHAP values
-* Análise de não-linearidade
+- O que realmente impacta o preço?    
+- Vale mais investir em reforma ou localização?
+- Quantos banheiros realmente agregam valor?
+    
 
-**Objetivo:**
+E hoje a empresa não tem respostas claras.
 
-Responder perguntas como:
+**Impacto**
 
-* Localização vs estrutura: o que pesa mais?
-* Qual o impacto real de banheiros adicionais?
-* Reformas aumentam o valor significativamente?
+- Dificuldade em justificar decisões
+- Perda de credibilidade analítica
+    
 
----
+**Pergunta de negócio**
 
-### 🟡 4. Segmentação de mercado
-
-**Desafio:**
-O mercado é tratado como homogêneo, reduzindo a performance dos modelos.
-
-**Abordagem:**
-
-* Clustering (K-Means / DBSCAN)
-
-**Possíveis segmentos:**
-
-* Alto padrão (waterfront, alta qualidade)
-* Médio padrão
-* Baixo padrão
+Quais variáveis mais influenciam o preço e como?
 
 ---
 
